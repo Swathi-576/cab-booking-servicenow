@@ -1,0 +1,45 @@
+                               +------------------------+
+                               |      Employee          |
+                               |      (sys_user)        |
+                               +------------------------+
+                               | PK sys_id             |
+                               | Name                 |
+                               | Email                |
+                               | Phone                |
+                               | Department           |
+                               +-----------+----------+
+                                           |
+                                           | 1
+                                           |
+                                           | M
+                               +-----------v----------+
+                               |       Booking        |
+                               +----------------------+
+                               | PK booking_id        |
+                               | Booking Number       |
+                               | Employee (FK)        |
+                               | Driver (FK)          |
+                               | Vehicle (FK)         |
+                               | Pickup Location      |
+                               | Destination          |
+                               | Pickup Date & Time   |
+                               | Fare                |
+                               | Status              |
+                               | Remarks             |
+                               +-----+---------+------+
+                                     |         |
+                                   M |         | M
+                                     |         |
+                                     |         |
+                         1           |         |          1
+                 +-------------------+         +-------------------+
+                 |                                         |
+       +---------v----------+                   +----------v---------+
+       |      Driver        |                   |      Vehicle       |
+       +--------------------+                   +--------------------+
+       | PK driver_id       |                   | PK vehicle_id      |
+       | Driver Name        |                   | Vehicle Number     |
+       | Phone Number       |                   | Vehicle Type       |
+       | License Number     |                   | Capacity           |
+       | Availability       |                   | Availability       |
+       +--------------------+                   +--------------------+
