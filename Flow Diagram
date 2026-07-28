@@ -1,0 +1,73 @@
+                              START
+                                │
+                                ▼
+                    Employee Logs into ServiceNow
+                                │
+                                ▼
+                    Open Cab Booking Application
+                                │
+                                ▼
+                     Fill Booking Request Form
+                                │
+                                ▼
+                    Submit Booking Request
+                                │
+                                ▼
+                   Booking Record Created
+                                │
+                                ▼
+               Validate Required Information
+                                │
+                    ┌───────────┴───────────┐
+                    │                       │
+                 Invalid                 Valid
+                    │                       │
+                    ▼                       ▼
+             Show Error Message     Flow Designer Triggered
+                    │                       │
+                    └───────────────┬───────┘
+                                    ▼
+                      Check Driver Availability
+                                    │
+                     ┌──────────────┴─────────────┐
+                     │                            │
+                 No Driver                  Driver Available
+                     │                            │
+                     ▼                            ▼
+          Notify Administrator          Assign Driver
+                     │                            │
+                     ▼                            ▼
+             Booking Pending           Assign Vehicle
+                                                  │
+                                                  ▼
+                                         Update Booking Status
+                                         (Assigned)
+                                                  │
+                                                  ▼
+                                 Notify Employee & Driver
+                                                  │
+                                                  ▼
+                                       Driver Starts Ride
+                                                  │
+                                                  ▼
+                                     Update Status
+                                     (In Progress)
+                                                  │
+                                                  ▼
+                                       Driver Completes Ride
+                                                  │
+                                                  ▼
+                                     Update Status
+                                     (Completed)
+                                                  │
+                                                  ▼
+                                   Update Driver Availability
+                                                  │
+                                                  ▼
+                                  Update Vehicle Availability
+                                                  │
+                                                  ▼
+                                        Close Booking
+                                                  │
+                                                  ▼
+                                                 END
